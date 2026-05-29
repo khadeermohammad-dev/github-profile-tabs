@@ -1,0 +1,252 @@
+html,
+body,
+#root {
+  background: #0d1117;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background:
+    radial-gradient(circle at top left, #1f6feb33, transparent 30%),
+    radial-gradient(circle at top right, #8b5cf633, transparent 30%), #0d1117;
+  color: #e6edf3;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.topbar {
+  background: rgba(22, 27, 34, 0.85);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid #30363d;
+  padding: 18px 46px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 26px;
+  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  width: 280px;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  background: #0d1117;
+  color: #e6edf3;
+  outline: none;
+}
+
+input:focus {
+  border-color: #58a6ff;
+  box-shadow: 0 0 0 3px #1f6feb55;
+}
+
+button {
+  padding: 11px 16px;
+  border-radius: 10px;
+  border: 1px solid #30363d;
+  background: linear-gradient(135deg, #238636, #1f6feb);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 20px #1f6feb66;
+}
+
+.github-layout {
+  max-width: 1150px;
+  margin: 38px auto;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  gap: 32px;
+  padding: 0 22px;
+}
+
+.profile-card,
+.content {
+  background: rgba(22, 27, 34, 0.72);
+  border: 1px solid #30363d;
+  border-radius: 22px;
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(16px);
+}
+
+.profile-card {
+  padding: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, #58a6ff55, transparent, #bc8cff55);
+  z-index: -1;
+}
+
+.profile-card img {
+  width: 100%;
+  border-radius: 22px;
+  border: 1px solid #30363d;
+  box-shadow: 0 0 35px #58a6ff33;
+}
+
+.profile-card h2 {
+  margin: 18px 0 4px;
+  color: #e6edf3;
+  font-size: 24px;
+}
+
+.username {
+  color: #8b949e;
+  margin-top: 0;
+}
+
+.bio {
+  color: #c9d1d9;
+  line-height: 1.5;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  padding: 14px;
+  margin: 18px 0;
+  background: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 14px;
+  color: #e6edf3;
+}
+
+.profile-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #58a6ff, #8b5cf6);
+  border: none;
+}
+
+.content {
+  padding: 24px;
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  border-bottom: 1px solid #30363d;
+  margin-bottom: 28px;
+}
+
+.tabs button {
+  background: transparent;
+  border: none;
+  color: #8b949e;
+  border-radius: 0;
+  padding: 14px 12px;
+}
+
+.tabs button:hover {
+  color: #e6edf3;
+  box-shadow: none;
+}
+
+.active-tab {
+  color: #58a6ff !important;
+  border-bottom: 2px solid #58a6ff !important;
+}
+
+.section-card {
+  color: #e6edf3;
+}
+
+.section-card h2 {
+  color: #e6edf3;
+  font-size: 30px;
+}
+
+.section-card p {
+  font-size: 17px;
+  color: #c9d1d9;
+}
+
+.repo-card,
+.follower-card {
+  background: linear-gradient(180deg, #161b22, #0d1117);
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 14px;
+}
+
+.repo-card:hover,
+.follower-card:hover {
+  border-color: #58a6ff;
+  box-shadow: 0 0 25px #1f6feb33;
+}
+
+.repo-card h3 {
+  color: #58a6ff;
+  margin-top: 0;
+}
+
+.followers-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+  gap: 16px;
+}
+
+.follower-card {
+  text-align: center;
+}
+
+.follower-card img {
+  border-radius: 50%;
+  border: 2px solid #58a6ff;
+}
+
+.message {
+  text-align: center;
+  margin-top: 30px;
+  color: #58a6ff;
+}
+
+.error {
+  text-align: center;
+  color: #ff7b72;
+  margin-top: 30px;
+}
+
+@media (max-width: 768px) {
+  .topbar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .github-layout {
+    grid-template-columns: 1fr;
+  }
+
+  input {
+    width: 210px;
+  }
+}
